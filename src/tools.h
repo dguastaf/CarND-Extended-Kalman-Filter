@@ -24,6 +24,11 @@ public:
   * A helper method to calculate Jacobians.
   */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
+  
+  /**
+  * A helper method to calculate radar-friendly Polar coordinates from Cartesian coordinates
+  */
+  Eigen::VectorXd CartesianToPolar(const Eigen::VectorXd& x_state);
 
 };
 
