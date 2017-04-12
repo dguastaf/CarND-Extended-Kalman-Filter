@@ -4,6 +4,8 @@ cmake_minimum_required (VERSION 3.5)
 
 add_definitions(-std=c++0x)
 
+set(CMAKE_BUILD_TYPE Debug)
+
 set(sources
     src/FusionEKF.cpp
     src/kalman_filter.cpp
