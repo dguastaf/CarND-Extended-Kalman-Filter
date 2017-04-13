@@ -60,8 +60,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
 
 	//check division by zero
 	if(fabs(c1) < 0.0001){
-		cout << "CalculateJacobian () - Error - Division by Zero" << endl;
-		return Hj;
+    c1 = 0.0001;
 	}
 
 	//compute the Jacobian matrix
@@ -81,11 +80,6 @@ VectorXd Tools::CartesianToPolar(const VectorXd& x_state) {
   
   float c1 = px*px+py*py;
 	float rho = sqrt(c1);
-  
-//  if (px < 0.0001 || py < 0.0001) {
-//    cout << "Something's up with cartesian to polar" << endl;
-//    return polar;
-//  }
   
   float phi = atan2(py, px);
   
